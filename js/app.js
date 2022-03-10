@@ -17,8 +17,9 @@ const isLiked = (id) => {
 
 const addToLiked = (id) => {
   likedPostsId.push(id);
+  // likedPostsId.includes(id);
   showPosts(posts);
-  console.log(posts);
+  reportPost();
 };
 
 const reportPost = (id) => {
@@ -153,8 +154,6 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
-  const productsContainer = document.getElementById("posts");
-  productsContainer.innerHTML = "";
   document.getElementById("liked").innerHTML = "";
   const likedPosts = getLikedPosts();
   likedPosts.forEach((post) => {
